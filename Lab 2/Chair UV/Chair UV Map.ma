@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Chair UV Map.ma
-//Last modified: Thu, Sep 14, 2023 05:30:58 PM
+//Last modified: Thu, Sep 14, 2023 02:28:12 PM
 //Codeset: UTF-8
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Mac OS X 13.5.2";
-fileInfo "UUID" "7E9A510B-504A-ABA6-1B61-D4B7B98A7EE9";
+fileInfo "UUID" "856A5889-714B-6E98-E263-EE8C0255BE06";
 createNode transform -s -n "persp";
 	rename -uid "B7B866FE-644A-5BBC-E502-129B1F57DE98";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.6024716328338542 7.0915811339438033 11.28329887406025 ;
-	setAttr ".r" -type "double3" -14.738352729540674 1044.999999997973 -1.9413701666965655e-15 ;
+	setAttr ".t" -type "double3" -6.6590778382682974 5.4473465408579447 8.9649884732271357 ;
+	setAttr ".r" -type "double3" -8.7383527295411145 1046.5999999979774 4.7621770706593372e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7DA40A52-B849-B009-2EFC-3988E4989082";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 12.822780741585319;
+	setAttr ".coi" 9.527607449421053;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -214,20 +214,20 @@ parent -s -nc -r -add "|pCube2|pCubeShape2" "pCube4" ;
 parent -s -nc -r -add "|pCube2|pCubeShape2" "pCube5" ;
 parent -s -nc -r -add "|pCube2|pCubeShape2" "pCube6" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4B87197B-AE4B-4B35-69ED-259B08EF5E26";
+	rename -uid "BE157202-944C-352C-D79F-9FA3EDFBFB1E";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "815F4E4B-554F-EB86-6C79-028D44D35C4B";
+	rename -uid "A7EEB624-E144-B33C-C217-A68F67513300";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "887EA350-2642-1410-FFD4-958F2AE59782";
+	rename -uid "A1A3F925-5647-45DF-C5AE-B1A9E9BD6DB9";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "99892E2C-0244-9206-1238-0BA178C6BE99";
+	rename -uid "15F6ED59-4D47-BFBE-8FA5-458618BAE08D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "D184C7A5-8947-AF79-6E05-B68EFA2480D3";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8B637F60-BD46-F141-7C04-C4B615A8930E";
+	rename -uid "40CE49E7-724F-5AB3-1C1A-1480168EA451";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B95F0C4B-4745-F408-604C-2183F331C1C8";
 	setAttr ".g" yes;
@@ -517,6 +517,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "polySplitRing2.out" "|pCylinder1|pCylinderShape1.i";
 connectAttr "polySplitRing6.out" "pCubeShape1.i";
 connectAttr "polySplitRing9.out" "|pCube2|pCubeShape2.i";
