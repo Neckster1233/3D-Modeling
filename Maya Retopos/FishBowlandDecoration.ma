@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: FishBowlandDecoration.ma
-//Last modified: Mon, Oct 30, 2023 09:40:37 AM
+//Last modified: Tue, Oct 31, 2023 08:28:12 AM
 //Codeset: UTF-8
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -10,19 +10,19 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Mac OS X 13.5.2";
-fileInfo "UUID" "36A031CA-FE4C-3CB1-F63C-FF980F31FF68";
+fileInfo "UUID" "392B0B2C-9B4D-9B16-2701-23B9913946D0";
 createNode transform -s -n "persp";
 	rename -uid "57C47927-3A46-3DB8-50BC-4BB7342DA87D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.31176624731004488 6.7487011475407019 21.822538108222307 ;
-	setAttr ".r" -type "double3" 348.86164726810654 -723.79999999926235 -4.4825099610848925e-16 ;
+	setAttr ".t" -type "double3" 7.4573025815791656 5.4071951445138886 6.8545071480325674 ;
+	setAttr ".r" -type "double3" 336.8616472680323 -670.19999999991296 0 ;
 	setAttr ".rp" -type "double3" -6.6613381477509392e-16 8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 3.1780076664859972e-17 -3.5692887963850432e-18 2.1830525617843706e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EAECBBE7-C049-4EF3-11DA-93872E29E167";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 19.125376802888319;
+	setAttr ".coi" 7.052564986607412;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
